@@ -1,0 +1,10 @@
+<h4>Provider List</h4>
+<ol>
+<% providers.each do |provider, index| %>
+    <li>
+        <%= form_tag("/auth/#{provider}", method: 'post', data: {turbo: false}) do %>
+            <button type='submit'>Login with <%= provider.capitalize %></button>
+        <% end %>
+    </li>
+<% end %>
+</ol>

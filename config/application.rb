@@ -16,6 +16,8 @@ module TestOauthService
     # Common ones are `templates`, `generators`, or `middleware`, for example.
     config.autoload_lib(ignore: %w[assets tasks])
 
+    config.hosts << "cf82-86-31-103-142.ngrok-free.app"
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
