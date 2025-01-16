@@ -17,6 +17,7 @@ module TestOauthService
     config.autoload_lib(ignore: %w[assets tasks])
 
     config.hosts << "cf82-86-31-103-142.ngrok-free.app"
+    config.hosts << "test-oauth-service.onrender.com"
 
     # Configuration for the application, engines, and railties goes here.
     #
