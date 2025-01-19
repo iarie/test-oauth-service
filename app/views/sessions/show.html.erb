@@ -31,7 +31,7 @@
     </section>
 
     <section>
-        <h4><%= user_info.info_source %></h4>
+        <h4><%= user_info.extra&.info_source %></h4>
         <pre class="highlighted-info"><%= JSON.pretty_generate(user_info.info.to_h) %></pre>
     </section>
 

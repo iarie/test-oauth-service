@@ -153,17 +153,20 @@ body {
     padding: 15px; /* Add more padding for readability */
     border-radius: 8px; /* Slightly rounded corners */
     overflow-x: auto; /* Allow horizontal scrolling if content is wide */
+    overflow-y: auto; /* Allow vertical scrolling if content is long */
     border: 1px solid #e0e0e0; /* Add a subtle border */
-    max-width: 600px; /* Center the content and keep it compact */
+    max-width: 400px; /* Center the content and keep it compact */
+    max-height: 250px; /* Center the content and keep it compact */
     margin: 0 auto; /* Center horizontally */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a soft shadow */
 }
 
-pre code {
+pre.highlighted-info {
     font-family: "Courier New", Courier, monospace; /* Use a monospace font */
     font-size: 14px; /* Slightly smaller font for better JSON presentation */
     line-height: 1.6; /* Increase line height for better readability */
-    white-space: pre-wrap; /* Allow text wrapping if needed */
+    white-space: pre-wrap;
+    text-align: left;
 }
 
 /* Responsive Design */
