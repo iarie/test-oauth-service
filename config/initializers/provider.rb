@@ -1,6 +1,5 @@
 module Provider
   LIST = %i[
-    github
     fitbit
   ].tap do |ary|
     if Rails.env.development?

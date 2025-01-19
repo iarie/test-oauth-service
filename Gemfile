@@ -44,7 +44,7 @@ gem "thruster", require: false
 # Auth
 gem 'omniauth'
 gem "omniauth-rails_csrf_protection"
-gem 'omniauth-github', github: 'intridea/omniauth-github'
+gem "omniauth-oauth2"
 
 gem 'multi_json'
 
