@@ -56,7 +56,8 @@ module OmniAuth
 
       extra do
         {
-            :raw_info => raw_info
+            :raw_info => raw_info,
+            :info_source => "https://api.fitbit.com/1/user/-/profile.json"
         }
       end
 

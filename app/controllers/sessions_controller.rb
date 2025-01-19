@@ -20,6 +20,11 @@ class SessionsController < ApplicationController
         refresh_token: "NRbtII0kzdptsewzyQAGivCptes=",
         expires: true,
         expires_at: (Time.current + 1.day).to_i
+      },
+      info_source: "foo",
+      info: {
+        foo: "bar",
+        number: 42
       }
     )
   end
