@@ -156,7 +156,7 @@ body {
     overflow-y: auto; /* Allow vertical scrolling if content is long */
     border: 1px solid #e0e0e0; /* Add a subtle border */
     max-width: 400px; /* Center the content and keep it compact */
-    max-height: 250px; /* Center the content and keep it compact */
+    max-height: 200px; /* Center the content and keep it compact */
     margin: 0 auto; /* Center horizontally */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a soft shadow */
 }
