@@ -1,23 +1,31 @@
 <div class="provider-session-container">
-    <h4><strong><%= user_info.provider.capitalize %></strong> Oauth Success</h4>
+    <h4><%= user_info.provider.capitalize %> Oauth Success</h4>
 
     <section class="session-details">
         <table>
             <tr>
                 <td><strong>Token:</strong></td>
-                <td><%= user_info.credentials.token %></td>
+                <td>
+                    <pre class="highlighted-token"><%= user_info.credentials.token[0..20] %>...</pre>
+                </td>
+                <td><button class="copy-button" data-token="<%= user_info.credentials.token %>">Copy</button></td>
             </tr>
             <tr>
                 <td><strong>Refresh Token:</strong></td>
-                <td><%= user_info.credentials.refresh_token %></td>
+                <td>
+                    <pre class="highlighted-token"><%= user_info.credentials.refresh_token[0..20] %>...</pre>
+                </td>
+                <td><button class="copy-button" data-token="<%= user_info.credentials.refresh_token %>">Copy</button></td>
             </tr>
             <tr>
                 <td><strong>Expires:</strong></td>
                 <td><%= user_info.credentials.expires %></td>
+                <td></td
             </tr>
             <tr>
                 <td><strong>Expires at:</strong></td>
                 <td><%= user_info.credentials.expires_at %></td>
+                <td></td
             </tr>
         </table>
     </section>
@@ -30,3 +38,31 @@
         <%= link_to "Back to provider list", root_path %>
     </div>
 </div>
+
+<!-- Toast Container for Popup Message -->
+<div id="toast" style="position: fixed; bottom: 20px; right: 20px; background: #28a745; color: white; padding: 10px 15px; border-radius: 5px; font-size: 14px; display: none; z-index: 1000;">
+    Text copied to clipboard!
+</div>
+
+<script>
+document.querySelectorAll(".copy-button").forEach((button) => {
+  button.addEventListener("click", () => {
+    const token = button.getAttribute("data-token");
+
+    // Copy token to clipboard
+    navigator.clipboard
+      .writeText(token)
+      .then(() => {
+        // Show popup message
+        const toast = document.getElementById("toast");
+        toast.style.display = "block";
+        setTimeout(() => {
+          toast.style.display = "none";
+        }, 2000);
+      })
+      .catch((err) => {
+        alert("Failed to copy token: " + err);
+      });
+  });
+});
+</script>
